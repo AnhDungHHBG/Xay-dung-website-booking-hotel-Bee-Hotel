@@ -1,6 +1,8 @@
-<div>
-    <div class="flex justify-center ">
-        <span class="  "> Tổng Quan</span>
-        <span class="text-3xl font-bold ">Trang Tổng Quan</span>
+<!-- <div>
+    <div class="w-full flex justify-center items-center h-[600px] bg-[#F5F5F5]">
+        <span class="text-center">Banner</span>
     </div>
-</div>
+    <div>
+        
+    </div>
+</div> -->

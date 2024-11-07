@@ -6,8 +6,16 @@ class BaseView {
         global $viewApp;
         
         extract($data);
-        $name = join(DIRECTORY_SEPARATOR, explode(".", $name));
-        include(join(DIRECTORY_SEPARATOR, array('.', $route->isAdminPage ? 'admin' : 'clients', 'views', "components", "{$name}.php")));
+        
+        $path = str_replace('.', DIRECTORY_SEPARATOR, $name);
+        $componentPath = join(DIRECTORY_SEPARATOR, [
+            '.',
+            $route->isAdminPage ? 'admin' : 'clients',
+            'views',
+            "{$path}.php"
+        ]);
+        
+        include($componentPath);
     }
 
     

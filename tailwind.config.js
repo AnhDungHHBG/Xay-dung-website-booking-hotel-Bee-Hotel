@@ -6,7 +6,12 @@ module.exports = {
     "./*.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        'body': '16px',
+        'logo': '35px',
+      },
+    },
   },
   plugins: [],
 }
