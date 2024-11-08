@@ -25,7 +25,7 @@ $carouselKey = $data['key'];
         <div class="swiper-wrapper">
             <?php foreach ($rooms as $room): ?>
                 <div class="swiper-slide">
-                    <?php $viewApp->requestComponents('home.components.CardHome', ['data' => $room]); ?>
+                    <?php $viewApp->requestComponents('HomePage.components.CardHome', ['data' => $room]); ?>
                 </div>
             <?php endforeach; ?>
         </div>
