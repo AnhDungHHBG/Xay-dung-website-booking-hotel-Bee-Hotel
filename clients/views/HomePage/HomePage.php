@@ -1,5 +1,5 @@
 <?php
-        // Dữ liệu mẫu
+        // Dữ
         $fakeData = [
             'title' => 'Latest on the Property Listing',
             'rooms' => [
@@ -75,9 +75,11 @@
                     'area' => '1,800',
                     'price' => 3200
                 ]
-            ]
+                ],
+
         ];
         ?>
+
 <div>
     <!-- banner -->
     <div class="w-full flex justify-center items-center h-[600px] bg-[#F5F5F5]">
