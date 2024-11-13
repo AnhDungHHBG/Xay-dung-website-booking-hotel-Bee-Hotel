@@ -12,4 +12,4 @@
 </head>
 
 <body>
-    <?php $viewApp->requestComponents('navbar'); ?>
+    <?php $viewApp->requestComponents('components.navbar'); ?>
