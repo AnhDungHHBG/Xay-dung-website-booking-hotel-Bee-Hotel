@@ -13,22 +13,15 @@ class CoreApp {
 
     public function initApp($prefix) {
         global $route;
-        
-        if ($route->isAdminPage) {
-            $adminPrefix = join(DIRECTORY_SEPARATOR, [$prefix, $route->adminLevel]);
-            $this->loadControllers($adminPrefix);
-            $this->loadModels($adminPrefix);
-            require_once join(DIRECTORY_SEPARATOR, array('.', $adminPrefix, 'router.php'));
-        } else {
-            $this->loadControllers($prefix);
-            $this->loadModels($prefix);
-            require_once join(DIRECTORY_SEPARATOR, array('.', $prefix, 'router.php'));
-        }
+        $this->loadControllers($prefix);
+        $this->loadModels($prefix);
+
+        require_once join(DIRECTORY_SEPARATOR, array('.', $prefix, 'router.php'));
     }
+
 
     public function loadAllFileWithStruct($directory, $struct) {
         $files = glob($directory . $struct);
-        // Duyệt qua từng tệp và thực hiện require_once
         foreach ($files as $file) {
             require_once $file;
         }
