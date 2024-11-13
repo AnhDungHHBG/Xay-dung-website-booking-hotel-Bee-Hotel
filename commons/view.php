@@ -9,9 +9,7 @@ class BaseView {
         
         $path = str_replace('.', DIRECTORY_SEPARATOR, $name);
         
-        $adminPath = $route->isAdminPage ? 
-            join(DIRECTORY_SEPARATOR, ['admin', $route->adminLevel]) : 
-            'clients';
+        $adminPath = $route->isAdminPage ? 'admin' : 'clients';
             
         $componentPath = join(DIRECTORY_SEPARATOR, [
             '.',
@@ -36,9 +34,7 @@ class BaseView {
         
         $name = str_replace('.', DIRECTORY_SEPARATOR, $name);
         
-        $adminPath = $route->isAdminPage ? 
-            join(DIRECTORY_SEPARATOR, ['admin', $route->adminLevel]) : 
-            'clients';
+        $adminPath = $route->isAdminPage ? 'admin' : 'clients';
             
         $viewPath = join(DIRECTORY_SEPARATOR, array('.', $adminPath, 'views', "{$name}.php"));
         
