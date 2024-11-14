@@ -25,7 +25,7 @@ class BaseModel {
     public function findIdTable($id) {
         try {
             global $coreApp;
-            $sql = "SELECT * FROM {$this->tableName} WHERE id = :id";
+            $sql = "SELECT * FROM {$this->tableName} WHERE {$this->tableName}_id = :id";
     
             $stmt = $this->conn->prepare($sql);
         
@@ -40,7 +40,7 @@ class BaseModel {
     public function removeIdTable($id) {
         try {
             global $coreApp;
-            $sql = "DELETE FROM {$this->tableName} WHERE (`id` = :id)";
+            $sql = "DELETE FROM {$this->tableName} WHERE (`{$this->tableName}_id` = :id)";
     
             $stmt = $this->conn->prepare($sql);
         
@@ -92,7 +92,7 @@ class BaseModel {
             }, $columns));
             
             // Tạo câu lệnh SQL
-            $sql = "UPDATE $this->tableName SET $setString WHERE id = :id";
+            $sql = "UPDATE $this->tableName SET $setString WHERE {$this->tableName}_id = :id";
             
             $stmt = $this->conn->prepare($sql);
             

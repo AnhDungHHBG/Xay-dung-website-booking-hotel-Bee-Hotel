@@ -110,3 +110,56 @@
         
     </div>
 </div>
+
+<!-- pop up notification promotion -->
+<?php
+// fake data
+$promotion = [
+    'promotion_id' => 1,
+    'promotion_name' => 'Giảm giá mùa hè',
+    'discount_rate' => 20.00,
+    'start_date' => '2023-12-01',
+    'end_date' => '2023-12-31'
+];
+?>
+<div id="promotion-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-500 ease-out">
+    <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative transform transition-transform duration-500 ease-out scale-90 opacity-0">
+        <button id="close-popup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2 class="text-2xl font-bold mb-4"><?= htmlspecialchars($promotion['promotion_name']) ?></h2>
+        <p class="text-gray-700 mb-2">Tỷ lệ giảm giá: <span class="font-semibold"><?= htmlspecialchars($promotion['discount_rate']) ?>%</span></p>
+        <p class="text-gray-700 mb-4">Thời gian: <span class="font-semibold"><?= htmlspecialchars($promotion['start_date']) ?></span> đến <span class="font-semibold"><?= htmlspecialchars($promotion['end_date']) ?></span></p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+            Xem chi tiết
+        </button>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('promotion-popup');
+    const closePopup = document.getElementById('close-popup');
+    const popupContent = popup.querySelector('div');
+
+    // Hiển thị popup với hiệu ứng
+    setTimeout(() => {
+        popup.classList.remove('hidden');
+        popup.classList.add('opacity-100');
+        popupContent.classList.add('scale-100', 'opacity-100');
+    }, 500); 
+
+    closePopup.addEventListener('click', function() {
+        popup.classList.add('hidden');
+        popup.classList.remove('opacity-100');
+        popupContent.classList.remove('scale-100', 'opacity-100');
+    });
+
+    popup.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.classList.add('hidden');
+            popup.classList.remove('opacity-100');
+            popupContent.classList.remove('scale-100', 'opacity-100');
+        }
+    });
+});
+</script>
