@@ -45,7 +45,9 @@ class BaseView {
         if ($route->isAdminPage) {
             include(join(DIRECTORY_SEPARATOR, array('.', $adminPath, 'views', "layout", "index.php")));
         } else {
+            include(join(DIRECTORY_SEPARATOR, array('.', $adminPath, 'views', "layout", "header.php")));
             include($viewPath);
+            include(join(DIRECTORY_SEPARATOR, array('.', $adminPath, 'views', "layout", "footer.php")));
         }
     }
 }
