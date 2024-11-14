@@ -12,7 +12,7 @@ class BaseModel {
     public function allTable() {
         try {
             global $coreApp;
-            $sql = "SELECT * FROM {$this->tableName} ORDER BY id DESC";
+            $sql = "SELECT * FROM {$this->tableName} ORDER BY {$this->tableName}_id DESC";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll();

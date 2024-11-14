@@ -1,6 +1,5 @@
 <?php 
 class Promotion extends BaseModel{
-    public $promotionTable = 'promotions';
+    public $tableName = 'promotion';
 }
-
 ?>
