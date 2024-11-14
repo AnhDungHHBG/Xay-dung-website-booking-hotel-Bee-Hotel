@@ -9,11 +9,12 @@ class BaseModel {
         $this->conn = $coreApp->connectDB();
     }
 
-    public function allTable() {
+    public function allTable($limit = 10) {
         try {
             global $coreApp;
-            $sql = "SELECT * FROM {$this->tableName} ORDER BY {$this->tableName}_id DESC";
+            $sql = "SELECT * FROM {$this->tableName} ORDER BY {$this->tableName}_id DESC LIMIT :limit";
             $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (Exception $e) {

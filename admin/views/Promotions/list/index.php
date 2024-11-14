@@ -1,5 +1,8 @@
 <div class="p-6 bg-white shadow-md rounded-lg">
     <h1 class="text-2xl font-bold mb-4 text-center text-gray-800">Quản lý Khuyến mãi</h1>
+    <div class="flex justify-end mb-4">
+        <a href="/admin/promotions/create" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Thêm Khuyến mãi</a>
+    </div>
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-200 rounded-lg">
             <thead class="bg-gray-100">
@@ -26,5 +29,10 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <!-- Phân trang -->
+        <div class="mt-4">
+            <!-- Giả sử có biến $pagination chứa thông tin phân trang -->
+            <?= $pagination ?>
+        </div>
     </div>
 </div>
