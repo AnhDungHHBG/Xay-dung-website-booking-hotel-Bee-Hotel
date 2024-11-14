@@ -9,10 +9,10 @@ class PromotionController extends BaseController
 
     public function promotion_list() {
         $data = $this->promotionModel->allTable();
-        $this->viewApp->requestView('Promotions.list.index', ['data' => $data]);
+        $this->viewApp->requestView('promotion.list.index', ['data' => $data]);
     }
     public function promotion_add(){
-        $this->viewApp->requestView('Promotions.add.index');
+        $this->viewApp->requestView('promotion.add.index');
     }
     public function promotion_delete(){
         $id = $_GET['id'];
@@ -28,7 +28,7 @@ class PromotionController extends BaseController
     public function promotion_edit(){
         $id = $_GET['id'];
         $data = $this->promotionModel->findIdTable($id);
-        $this->viewApp->requestView('Promotions.edit.index', ['data' => $data]);
+        $this->viewApp->requestView('promotion.edit.index', ['data' => $data]);
 
     } 
     public function promotion_post_edit(){

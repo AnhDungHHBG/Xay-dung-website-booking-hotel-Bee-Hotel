@@ -86,13 +86,13 @@
         <span class="text-center">Banner</span>
     </div>
     <div>
-    <?php $viewApp->requestComponents('HomePage.components.ListingCard', ['data' => array_merge($fakeData, ['key' => 'carousel1'])]); ?>
+    <?php $viewApp->requestComponents('home_page.components.list_card', ['data' => array_merge($fakeData, ['key' => 'carousel1'])]); ?>
     </div>
     <div>
-        <?php $viewApp->requestComponents('HomePage.components.ListingCard', ['data' => array_merge($fakeData, ['key' => 'carousel2'])]); ?>
+        <?php $viewApp->requestComponents('home_page.components.list_card', ['data' => array_merge($fakeData, ['key' => 'carousel2'])]); ?>
     </div>
     <div>
-        <?php $viewApp->requestComponents('HomePage.components.ListingCard', ['data' => array_merge($fakeData, ['key' => 'carousel3'])]); ?>
+        <?php $viewApp->requestComponents('home_page.components.list_card', ['data' => array_merge($fakeData, ['key' => 'carousel3'])]); ?>
     </div>
     <div class="container mx-auto my-8 bg-[#F5F5F5] h-[400px] flex justify-between items-center px-5" >
         <div class="max-w-lg ">
@@ -110,6 +110,41 @@
         
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- pop up notification promotion -->
 <?php

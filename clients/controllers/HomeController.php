@@ -6,6 +6,6 @@ class HomeController extends BaseController
 
     public function index() {
      
-        $this->viewApp->requestView('HomePage.HomePage' );
+        $this->viewApp->requestView('home_page.home_page' );
     }
 }

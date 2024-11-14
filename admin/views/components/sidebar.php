@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li class="mb-4">
-                    <a href="<?= $route->getLocateAdmin('promotions-add') ?>" class="text-gray-900 text-sm flex items-center hover:text-[#f84525]">
+                    <a href="<?= $route->getLocateAdmin('promotion-add') ?>" class="text-gray-900 text-sm flex items-center hover:text-[#f84525]">
                         <i class="fas fa-plus mr-2"></i> Thêm Khuyến Mãi
                     </a>
                 </li>
