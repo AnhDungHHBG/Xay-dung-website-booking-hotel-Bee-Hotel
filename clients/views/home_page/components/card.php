@@ -6,9 +6,9 @@
 <div class="relative bg-white rounded-lg shadow-md overflow-hidden group">
     <div class="relative h-48">
         <img 
-            src="<?= $data['image'] ?? './public/images/default-property.jpg' ?>" 
+            src="<?= $data['image'] ?? './public/images/default-property.jpg' ?> " 
             alt="<?= $data['title'] ?? 'Property Image' ?>"
-            class="w-full h-full object-cover"
+            class="w-full h-[280px] object-cover"
         >
         <button class="absolute top-3 right-3 p-2 rounded-full bg-white/50 hover:bg-white transition-colors">
             <i class="far fa-heart text-gray-600 hover:text-red-500"></i>
@@ -49,5 +49,5 @@
         </div>
     </div>
 
-    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+    <!-- <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div> -->
 </div>

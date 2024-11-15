@@ -6,11 +6,11 @@ $carouselKey = $data['key'];
 
 <div class="container mx-auto px-4">
     <div class="flex justify-between items-center mb-8">
+
         <div>
-            <h1 class="text-[36px] font-bold"><?php echo $title; ?></h1>
-            <div class="w-12 h-1 bg-gray-800 mt-2"></div>
+            <?php $viewApp->requestComponents('home_page.components.title_section', ['title' => $title]); ?>
         </div>
-        
+       
         <div class="flex gap-4">
             <button class="listing-prev-<?php echo $carouselKey; ?> w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:bg-gray-100 transition-colors">
                 <i class="fas fa-chevron-left"></i>
@@ -25,7 +25,7 @@ $carouselKey = $data['key'];
         <div class="swiper-wrapper">
             <?php foreach ($rooms as $room): ?>
                 <div class="swiper-slide">
-                    <?php $viewApp->requestComponents('home_page.components.card_home', ['data' => $room]); ?>
+                    <?php $viewApp->requestComponents('home_page.components.card', ['data' => $room]); ?>
                 </div>
             <?php endforeach; ?>
         </div>
